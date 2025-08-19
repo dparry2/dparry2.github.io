@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darren Parry - Data Scientist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for a clean look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* A very light gray background */
+        }
+        /* Replace the @apply directive with equivalent Tailwind CSS classes in the HTML */
+        .section-title {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700; /* font-bold */
+            color: #1f2937; /* text-gray-800 */
+            margin-bottom: 2rem; /* mb-8 */
+            text-align: center; /* text-center */
+        }
+        /* Removed @apply and replaced with equivalent Tailwind CSS classes */
+        .project-card {
+            background-color: #ffffff; /* bg-white */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* shadow-lg */
+            overflow: hidden; /* overflow-hidden */
+            transition: transform 0.3s ease-in-out; /* transition-transform duration-300 */
+        }
+        .project-card:hover {
+            transform: scale(1.05); /* hover:scale-105 */
+        }
+        /* Removed @apply and replaced with equivalent Tailwind CSS classes */
+        .nav-link {
+            color: #4B5563; /* text-gray-600 */
+            transition: color 0.3s ease-in-out; /* transition-colors duration-300 */
+        }
+        .nav-link:hover {
+            color: #4F46E5; /* hover:text-indigo-600 */
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Darren Parry</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#about" class="block py-2 nav-link">About</a>
+            <a href="#projects" class="block py-2 nav-link">Projects</a>
+            <a href="#contact" class="block py-2 nav-link">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">Data Scientist & Analytics</h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">Transforming complex data into actionable insights. Passionate about building intelligent systems that solve real-world problems.</p>
+                <a href="#projects" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors duration-300">View My Work</a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">About Me</h2>
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/3">
+                        <img src="https://placehold.co/400x400/E2E8F0/4A5568?text=Your+Photo" alt="A professional photo of you" class="rounded-full shadow-lg mx-auto">
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="mb-4">
+                            Hello! I'm a dedicated data scientist with a strong background in statistical analysis, machine learning, and data visualization. My journey into data science began with a fascination for uncovering hidden patterns in data to drive decision-making.
+                        </p>
+                        <p class="mb-4">
+                            I specialize in Python, R, SQL, and various machine learning frameworks like Scikit-learn, TensorFlow, and PyTorch. I have experience in natural language processing, predictive modeling, and deploying models to production environments.
+                        </p>
+                        <p>
+                            When I'm not wrangling data, I enjoy hiking, reading about the latest advancements in AI, and contributing to open-source projects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Project Card 1 -->
+                    <div class="project-card">
+                        <img src="https://placehold.co/600x400/C4B5FD/4338CA?text=Project+1" alt="Project 1 Thumbnail" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Customer Churn Prediction</h3>
+                            <p class="mb-4">Developed a machine learning model to predict customer churn for a telecom company, achieving 85% accuracy and helping to reduce customer attrition.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Scikit-learn</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Pandas</span>
+                            </div>
+                            <a href="#" class="font-semibold text-indigo-600 hover:underline">View Details &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card">
+                        <img src="https://placehold.co/600x400/A5B4FC/3730A3?text=Project+2" alt="Project 2 Thumbnail" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Sentiment Analysis of Reviews</h3>
+                            <p class="mb-4">Built an NLP model to classify the sentiment of product reviews, providing valuable feedback to the product development team.</p>
+                             <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">NLTK</span>
+                                <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">TensorFlow</span>
+                            </div>
+                            <a href="#" class="font-semibold text-indigo-600 hover:underline">View Details &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card">
+                        <img src="https://placehold.co/600x400/818CF8/4F46E5?text=Project+3" alt="Project 3 Thumbnail" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Sales Forecasting Dashboard</h3>
+                            <p class="mb-4">Created an interactive dashboard to visualize sales data and forecast future sales using time-series analysis.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">R</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Shiny</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">SQL</span>
+                            </div>
+                            <a href="#" class="font-semibold text-indigo-600 hover:underline">View Details &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out!
+                </p>
+                <a href="mailto:your.email@example.com" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors duration-300">Say Hello</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <!-- Replace with your actual links -->
+                <a href="#" class="hover:text-indigo-400 transition-colors">GitHub</a>
+                <a href="#" class="hover:text-indigo-400 transition-colors">LinkedIn</a>
+                <a href="#" class="hover:text-indigo-400 transition-colors">Twitter</a>
+            </div>
+            <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
